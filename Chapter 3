@@ -1,0 +1,46 @@
+#Exercise 3.1:
+#def pay():
+#    hours = float(input('Enter hours:\n'))
+#    rate = float(input('Enter rate:\n'))
+#    if hours > 40:
+#        pay = (rate * 40) + (rate * 1.5 * (hours-40))
+#        return pay
+#    else:
+#        pay = hours * rate
+#        return pay
+#print(pay())
+
+
+#Exercise 3.2:
+#def pay():
+#    hours = input('Enter hours:\n')
+#    rate = input('Enter rate:\n')
+#    try:
+#        if hours > 40:
+#            pay = (float(rate) * 40) + (float(rate) * 1.5 * (float(hours)-40))
+#            return pay
+#        else:
+#            pay = float(hours) * float(rate)
+#            return pay
+#    except:
+#        return 'Error, please enter a numeric value'
+#print(pay())
+
+
+#Exercise 3.3:
+#def get_grade():
+#    score = input('Enter score:\n')
+#    try:
+#        if 1.0 >= float(score) >= 0.9:
+#            print('A')
+#        elif 0.9 >= float(score) >= 0.8:
+#            print('B')
+#        elif 0.8 >= float(score) >= 0.7:
+#            print('C')
+#        elif 0.7 >= float(score) >= 0.6:
+#            print('D')
+#        elif 0.6 > float(score) >= 0.0:
+#            print('F')
+#    except:
+#        print('Bad score, please ensure you have entered your score as a numeric value and its between 0 and 1')
+#(get_grade())
