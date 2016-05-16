@@ -1,0 +1,32 @@
+#Exercise 2.2
+name = input('What is your name?\n')
+print('Hello ' + name)
+
+#Exercise 2.3
+hours = int(input('Enter hours:\n'))
+rate = float(input('Enter rate:\n'))
+pay = hours * rate
+print('Hours: ' + str(hours))
+print('Rate: ' + str(rate))
+print('Pay: ' + str(pay))
+
+#Exercise 2.4
+width = 17
+height = 12.0
+width_1 = width / 2
+print(width_1)
+print(type(width_1))
+width_2 = width/2.0
+print(width_2)
+print(type(width_2))
+height_3 = height / 3
+print(height_3)
+print(type(height_3))
+tot = 1 + 2 * 5
+print(tot)
+print(type(tot))
+
+#Exercise 2.5
+cel = float(input('Enter temperature in Celsius:\n'))
+fah = (cel * 9 / 5) + 32
+print('Temperature in Fahrenheit: ' + str(fah))
