@@ -1,0 +1,29 @@
+#Exercise 5.1:
+total = 0
+count = 0
+while True:
+    line = input('Enter a number: ')
+    if line == 'done':
+        break
+    try:
+        total += int(line)
+        count += 1
+        print(int(line))
+    except:
+        print('Invalid input')
+print(total, count, total/count)
+
+
+#Exercise 5.2:
+number_list = []
+while True:
+    line = input('Enter a number: ')
+    if line == 'done':
+        break
+    try:
+        print(int(line))
+        number_list.append(line)
+    except:
+        print('Invalid input')
+print(max(number_list))
+print(min(number_list))
