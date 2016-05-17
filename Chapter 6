@@ -1,0 +1,25 @@
+#Exercise 6.1:
+fruit = 'banana'
+index = len(fruit) -1
+while index >= 0:
+    letter = fruit[index]
+    print(letter)
+    index -= 1
+
+#Exercise 6.3:
+def count(s, l):
+    c = 0
+    for letter in s:
+        if letter == l:
+            c += 1
+    print(c)
+count('banana', 'a')
+
+#Exercise 6.4:
+print(fruit.count('a'))
+
+#Exercise 6.5:
+s = 'X-DSPAM-Confidence: 0.8475'
+co = s.find(':')
+num = s[co+2:]
+print(float(num))
