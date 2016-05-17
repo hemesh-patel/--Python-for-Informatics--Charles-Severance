@@ -24,7 +24,7 @@ def computegrade(score):
             print('C')
         elif 0.7 >= score > 0.6:
             print('D')
-        elif 0.6 >= score >=0.0:
+        elif 0.6 >= score >= 0.0:
             print('F')
         else:
             print('Bad score, please enter a numeric value between 0 and 1')
