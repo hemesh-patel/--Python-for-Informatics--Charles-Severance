@@ -1,0 +1,47 @@
+#Exercise 8.1:
+def middle(t):
+    t1 = t[1: -1]
+    print(t1)
+middle([1, 2, 3, 4])
+
+#Exercise 8.3:
+fhand = open(r'C:\Users\Hemesh\PycharmProjects\untitled\Python for Informatics\mbox-short.txt')
+count = 0
+for line in fhand:
+    words = line.split()
+    if len(words) == 0 or words[0] != 'From': continue
+    print(words[2])
+
+#Exercise 8.4
+fhand = open(r'C:\Users\Hemesh\PycharmProjects\untitled\Python for Informatics\romeo.txt')
+lst = []
+for line in fhand:
+    line = line.split()
+    for i in line:
+        if i not in lst:
+            lst.append(i)
+print(sorted(lst))
+
+#Exercise 8.5
+fhand = open(r'C:\Users\Hemesh\PycharmProjects\untitled\Python for Informatics\mbox-short.txt')
+count = 0
+for line in fhand:
+    if line.startswith('From:'): continue
+    if not line.startswith('From'): continue
+    words = line.split()
+    print(words[1])
+    count += 1
+print('There were %d lines in the file with From as the first word' % count)
+
+#Exercise 8.6:
+lst = []
+while True:
+    number = input('Enter a number: ')
+    if number == 'done': break
+    try:
+        lst.append(int(number))
+    except ValueError:
+        print('invalid input')
+
+print('Maximum: ' + str(max(lst)))
+print('Minimum: ' + str(min(lst)))
