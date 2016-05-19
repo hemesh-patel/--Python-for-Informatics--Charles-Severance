@@ -1,0 +1,54 @@
+#Exercise 9.1:
+dic = {}
+fhand = open(r'C:\Users\Hemesh\PycharmProjects\untitled\Python for Informatics\words.txt')
+for line in fhand:
+    line = line.strip()
+    word = line.split(' ')
+    for i in word:
+        dic[i] = 'val'
+print(dic)
+
+#Exercise 9.2:
+def histogram(s):
+    d = dict()
+    for c in s:
+        d[c] = d.get(c, 0) + 1
+    return d
+print(histogram('brontosaurus'))
+
+#Exercise 9.3:
+fhand = open(r'C:\Users\Hemesh\PycharmProjects\untitled\Python for Informatics\mbox-short.txt')
+d = {}
+for line in fhand:
+    line = line.strip()
+    if line.startswith('From') and not line.startswith('From:'):
+        line = line.split(' ')
+        day = (line[2])
+        d[day] = d.get(day, 0) + 1
+print(d)
+
+#Exercise 9.4:
+fhand = open(r'C:\Users\Hemesh\PycharmProjects\untitled\Python for Informatics\mbox-short.txt')
+d = {}
+for line in fhand:
+    line = line.strip()
+    if line.startswith('From') and not line.startswith('From:'):
+        line = line.split(' ')
+        email = line[1]
+        d[email] = d.get(email, 0) + 1
+val = max(d.values())
+for k, v in d.items():
+    if v == val:
+        print(k, val)
+
+#Exercise 9.5:
+fhand = open(r'C:\Users\Hemesh\PycharmProjects\untitled\Python for Informatics\mbox-short.txt')
+d = {}
+for line in fhand:
+    line = line.strip()
+    if line.startswith('From') and not line.startswith('From:'):
+        line = line.split(' ')
+        email = line[1]
+        address = email.split('@')[1]
+        d[address] = d.get(address, 0) + 1
+print(d)
