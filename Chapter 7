@@ -1,0 +1,32 @@
+#Exercise 7.1:
+#fhand = open(r'C:\Users\Hemesh\PycharmProjects\untitled\Python for Informatics\mbox-short.txt')
+#for line in fhand:
+#    if line.isupper():
+#        print(line)
+
+#Exercise 7.2:
+#fname = input('Enter file location:\n')
+#fhand = open(fname)
+#spam = []
+#for line in fhand:
+#    line = line.strip()
+#    if line.startswith('X-DSPAM-Confidence:'):
+#        s = line.find('0')
+#        spam.append(float(line[s:]))
+#ave = float((sum(spam))) / (len(spam))
+#print('Average spam confidence: ' + str(ave))
+
+#Exercise 7.3:
+#fname = input('Enter file location:\n')
+#count = 0
+#if fname == 'na na boo boo':
+#    up = fname.upper()
+#    print("%s TO YOU - You have been punk'd" % up)
+#    exit()
+#try:
+#    fhand = open(fname)
+#    for line in fhand:
+#        count += 1
+#    print(count)
+#except:
+#    print('File cannot be opened: %s' %fname)
