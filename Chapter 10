@@ -1,0 +1,41 @@
+#Exercise 10.1:
+fhand = open(r'C:\Users\Hemesh\PycharmProjects\untitled\Python for Informatics\mbox.txt')
+d = {}
+for line in fhand:
+    if line.startswith('From') and not line.startswith('From:'):
+        email = line.split(' ')[1]
+        d[email] = d.get(email, 0) + 1
+lst = []
+for k, v in d.items():
+    lst.append((v, k))
+lst.sort(reverse=True)
+for k, v in lst[:1]:
+    print(v, k)
+
+#Exercise 10.2:
+fhand = open(r'C:\Users\Hemesh\PycharmProjects\untitled\Python for Informatics\mbox-short.txt')
+d = {}
+for line in  fhand:
+    if line.startswith('From') and not line.startswith('From:'):
+        time = line.split(' ')[6]
+        hour = time.split(':')[0]
+        d[hour] = d.get(hour, 0) + 1
+lst = []
+for k, v in d.items():
+    lst.append((k, v))
+lst.sort()
+for k, v in lst:
+    print(k, v)
+
+#Exercise 10.3:
+def most_frequent(s):
+    d = {}
+    for i in s:
+        d[i] = d.get(i, 0) + 1
+    lst = []
+    for k, v in d.items():
+        lst.append((v, k))
+    lst.sort(reverse=True)
+    for k, v in lst:
+        print(k, v)
+most_frequent('hello')
