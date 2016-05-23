@@ -1,0 +1,14 @@
+#Exercise 11.2:
+
+import re
+lst = []
+fhand = open(r'C:\Users\Hemesh\PycharmProjects\untitled\Python for Informatics\mbox-short.txt')
+count = 0
+tot = 0
+for line in fhand:
+    x = re.findall('^New Revision: ([0-9.]+)', line)
+    if len(x) > 0:
+        count += 1
+        for i in x:
+            tot += float(i)
+print(tot/count)
