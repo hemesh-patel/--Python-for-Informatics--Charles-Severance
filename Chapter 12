@@ -1,0 +1,58 @@
+#These exercises are completed in python 2.7
+#Exercise 12.1
+import socket
+mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+url = raw_input('Enter a URL:\n')
+web = url.split('/')[2]
+try:
+    mysock.connect(('web', 80))
+except:
+    print 'Invalid URL'
+
+#Exercise 12.2:
+import socket
+mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+url = raw_input('Enter a URL:\n')
+web = url.split('/')[2]
+try:
+    mysock.connect(('web', 80))
+    mysock.send('GET http://www.py4inf.com/code/romeo.txt HTTP/1.0\n\n')
+    count = 0
+    while True:
+        data = mysock.recv(1)
+        count =+ 1
+        if count == 3000 or len(data) < 1:
+            break
+        print data
+    mysock.close()
+except:
+    print 'Invalid URL'
+
+#Exercise 12.3
+import urllib
+url = raw_input('Enter a URL:\n')
+web = url.split('/')[2]
+try:
+    fhand = urllib.urlopen(web)
+    count = 0
+    for line in fhand:
+        line = line.strip()
+        for i in line:
+            count += 1
+            if count < 3001:
+                print i
+    print count
+except:
+    print 'Invalid URL'
+
+#Exercise 12.4:
+import urllib
+from BeautifulSoup import*
+url = raw_input('Enter - ')
+html = urllib.urlopen(url).read()
+soup = BeautifulSoup(html)
+tags = soup('p')
+count = 0
+for tag in tags:
+    count += 1
+print count
